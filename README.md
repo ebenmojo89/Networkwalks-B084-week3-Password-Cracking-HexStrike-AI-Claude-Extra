@@ -88,7 +88,7 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
         source hexstrike-env/bin/activate 
         python3 hexstrike_server.py
 ![]()
-   # e. Edit MCP Server configuration on claude desktop<br>
+   # e. Edit MCP Server configuration on Claude Desktop<br>
         {
           "mcpServers": {
             "hexstrike-ai": {
@@ -104,3 +104,29 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
   Server is running now.  
 ![]()
 ![]()
+
+## 5.2 Password Cracking using HexStrike-AI with Claude Desktop
+
+This task employed the use of AI-assisted approach to password cracking by integrating Claude Desktop with HexStrike-AI MCP server. Natural language instructions were translated directly into automated security operations. The Claude Desktop acted as the reasoning engine whilst HexStrike-AI served as the execution bridge that invoked the local JTR binaries. Together, they streamlined the password-recovery lifecycle, reducing manual CLI and accelerating password cracking. The steps followed during the step up process as as follows:
+
+1. Copy the target PDF file to desktop of Kali Linux.
+
+2. Open Claude AI desktop on Kali Linux. Enter the following prompts:<br>
+   a. Check if John the Ripper is installed in this HexStrike MCP and show me its version.
+![]()
+
+   b. Calculate the hash value of this PDF file: /home/eben/Desktop/MyLockedPDF.pdf
+![]()
+
+   c. Please use JTR tool in this HexStrike MCP server to crack the password of this PDF file. Use the rockyou.txt wordlist dictionary.
+![]()
+
+# 6. 💡Lesson Learnt
+
+Cracking a password-protected file .pdf isn't a single command, it requires extracting the hash first using utilities like pdf2john before passing it to John. Claude effectively chains these multi-step workflows together from a single prompt without manual file-piping.
+
+# 7. 🏅Conclusion
+
+Integrating Claude Desktop with the HexStrike-AI MCP server demonstrates how LLM can effectively streamline password-cracking workflows. By pairing natural language reasoning with automated local tool execution via JTR, this approach eliminates much of the manual friction involved in hash extraction and multi=stage execution.
+
+While AI-driven orchestration significantly accelerates setup and troubleshooting, the underlying cryptographic constraints—such as encryption algorithm strength and wordlist quality still remains the primary factors governing password cracking success. Ultimately, this workflow highlights the practical value of MCP-enabled AI agents as force multipliers in authorized penetration testing.
