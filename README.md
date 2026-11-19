@@ -39,6 +39,8 @@ The main objectives of this project are to:
 - Download and setup HexStrike MCP Server.
 - Using JTR with AI assistance to find hashes and crack a locked pdf file.
 
+---
+
 # 4. 🔗Tools Used
 
 The table below lists each tool used in this project and its purpose.
@@ -49,6 +51,8 @@ The table below lists each tool used in this project and its purpose.
 | JTR              | Calculating hashes and cracking protected files.        |
 | Claude Desktop   | Front-end interface and reasoning engine.               |
 | HexStrike-AI MCP | Execution bridge between Claude and JTR/security tools. |
+
+---
 
 # 5. 🪜Activities Performed
 
@@ -66,13 +70,15 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
    # c. Update and install<br>
         sudo apt update 
         sudo apt install claude-desktop
-![]()
-![]()
 
 2. Open Claude Desktop AI & complete the sign-in process. 
-![]()
+![](Screenshot1-Claude-signin.png)
 
-3. Download Hexstrike MCP on Kali Linux using Github by running below commands. Github repository & detailed instructions can be found here: `https://github.com/0x4m4/hexstrike-ai`.<br>
+![](Screenshot2-Claude-signin.png)
+
+![](Screenshot3-Claude-signin.png)
+
+4. Download Hexstrike MCP on Kali Linux using Github by running below commands. Github repository & detailed instructions can be found here: `https://github.com/0x4m4/hexstrike-ai`.<br>
    # a. Clone the repository<br>
         git clone https://github.com/0x4m4/hexstrike-ai.git
         cd hexstrike-ai
@@ -81,13 +87,13 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
         source hexstrike-env/bin/activate
    # c. Install Python dependencies<br>
         pip3 install -r requirements.txt
-![]()
-![]()
+![](Screenshot4-Claude-signin.png)
+![](Screenshot5-HexStrike.png)
    # d. Start HexStrike server<br>
         cd ~/hexstrike-ai 
         source hexstrike-env/bin/activate 
         python3 hexstrike_server.py
-![]()
+![](Screenshot6-HexStrike.png)
    # e. Edit MCP Server configuration on Claude Desktop<br>
         {
           "mcpServers": {
@@ -102,8 +108,8 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
           }
         }
   Server is running now.  
-![]()
-![]()
+![](Screenshot7-HexStrike-Claude.png)
+![](Screenshot9-HexStrike-Claude-JTR.png)
 
 ## 5.2 Password Cracking using HexStrike-AI with Claude Desktop
 
@@ -113,20 +119,39 @@ This task employed the use of AI-assisted approach to password cracking by integ
 
 2. Open Claude AI desktop on Kali Linux. Enter the following prompts:<br>
    a. Check if John the Ripper is installed in this HexStrike MCP and show me its version.
-![]()
+![](Screenshot9-HexStrike-Claude-JTR.png)
 
    b. Calculate the hash value of this PDF file: /home/eben/Desktop/MyLockedPDF.pdf
-![]()
+![](Screenshot10-HexStrike-Claude-Hash.png)
 
    c. Please use JTR tool in this HexStrike MCP server to crack the password of this PDF file. Use the rockyou.txt wordlist dictionary.
-![]()
+![](Screenshot11-HexStrike-Claude-Cracked.png)
+
+---
 
 # 6. 💡Lesson Learnt
 
-Cracking a password-protected file .pdf isn't a single command, it requires extracting the hash first using utilities like pdf2john before passing it to John. Claude effectively chains these multi-step workflows together from a single prompt without manual file-piping.
+Cracking a password-protected file like .pdf isn't a single command, it requires extracting the hash first using utilities like pdf2john before passing it to John. Claude effectively chains these multi-step workflows together from a single prompt without manual file-piping, thus reducing stress and human errors.
+
+---
 
 # 7. 🏅Conclusion
 
-Integrating Claude Desktop with the HexStrike-AI MCP server demonstrates how LLM can effectively streamline password-cracking workflows. By pairing natural language reasoning with automated local tool execution via JTR, this approach eliminates much of the manual friction involved in hash extraction and multi=stage execution.
+Integrating Claude Desktop with the HexStrike-AI MCP server demonstrates how LLM can effectively streamline password-cracking workflows. Pairing natural language reasoning with automated local tool execution via JTR, this approach eliminates much of the manual friction involved in hash extraction and multi-stage execution.
 
-While AI-driven orchestration significantly accelerates setup and troubleshooting, the underlying cryptographic constraints—such as encryption algorithm strength and wordlist quality still remains the primary factors governing password cracking success. Ultimately, this workflow highlights the practical value of MCP-enabled AI agents as force multipliers in authorized penetration testing.
+While AI-driven orchestration significantly accelerates setup and troubleshooting, the underlying cryptographic constraints such as encryption algorithm strength and wordlist quality still remains the primary factors governing password cracking success. Ultimately, this workflow highlights the practical value of MCP-enabled AI agents as force multipliers in authorized penetration testing.
+
+---
+
+# 👤 Author
+
+**Ebenezer Twumasi Frimpong**\
+Cybersecurity Intern B084
+
+LinkedIn: [https://linkedin.com/in.ebenezer-twumasi-frimpong-0689143b8/](https://www.linkedin.com/in/ebenezer-twumasi-frimpong-0689143b8/)
+
+---
+
+## 📌 Project Information
+
+**Program Name:** Cybersecurity at Networkwalks | **Week:** 03 | **Project:** Password Cracking with HexStrike-AI & Claude | **Repository:** GitHub
