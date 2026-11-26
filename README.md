@@ -72,11 +72,11 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
         sudo apt install claude-desktop
 
 2. Open Claude Desktop AI & complete the sign-in process. 
-![](Screenshot1-Claude-signin.png)
+![](Screenshots/Screenshot1-Claude-signin.png)
 
-![](Screenshot2-Claude-signin.png)
+![](Screenshots/Screenshot2-Claude-signin.png)
 
-![](Screenshot3-Claude-signin.png)
+![](Screenshots/Screenshot3-Claude-signin.png)
 
 4. Download Hexstrike MCP on Kali Linux using Github by running below commands. Github repository & detailed instructions can be found here: `https://github.com/0x4m4/hexstrike-ai`.<br>
    # a. Clone the repository<br>
@@ -87,13 +87,13 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
         source hexstrike-env/bin/activate
    # c. Install Python dependencies<br>
         pip3 install -r requirements.txt
-![](Screenshot4-Claude-signin.png)
-![](Screenshot5-HexStrike.png)
+![](Screenshots/Screenshot4-Claude-signin.png)
+![](Screenshots/Screenshot5-HexStrike.png)
    # d. Start HexStrike server<br>
         cd ~/hexstrike-ai 
         source hexstrike-env/bin/activate 
         python3 hexstrike_server.py
-![](Screenshot6-HexStrike.png)
+![](Screenshots/Screenshot6-HexStrike.png)
    # e. Edit MCP Server configuration on Claude Desktop<br>
         {
           "mcpServers": {
@@ -108,8 +108,8 @@ Conversely, HexStrike MCP acts as the middleware bridge connecting Claude Deskto
           }
         }
   Server is running now.  
-![](Screenshot7-HexStrike-Claude.png)
-![](Screenshot9-HexStrike-Claude-JTR.png)
+![](Screenshots/Screenshot7-HexStrike-Claude.png)
+![](Screenshots/Screenshot9-HexStrike-Claude-JTR.png)
 
 ## 5.2 Password Cracking using HexStrike-AI with Claude Desktop
 
@@ -119,13 +119,13 @@ This task employed the use of AI-assisted approach to password cracking by integ
 
 2. Open Claude AI desktop on Kali Linux. Enter the following prompts:<br>
    a. Check if John the Ripper is installed in this HexStrike MCP and show me its version.
-![](Screenshot9-HexStrike-Claude-JTR.png)
+![](Screenshots/Screenshot9-HexStrike-Claude-JTR.png)
 
    b. Calculate the hash value of this PDF file: /home/eben/Desktop/MyLockedPDF.pdf
-![](Screenshot10-HexStrike-Claude-Hash.png)
+![](Screenshots/Screenshot10-HexStrike-Claude-Hash.png)
 
    c. Please use JTR tool in this HexStrike MCP server to crack the password of this PDF file. Use the rockyou.txt wordlist dictionary.
-![](Screenshot11-HexStrike-Claude-Cracked.png)
+![](Screenshots/Screenshot11-HexStrike-Claude-Cracked.png)
 
 ---
 
